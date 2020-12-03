@@ -1,0 +1,16 @@
+{% extends 'VRapp/base.html' %}
+
+{% block content %}
+    <h1>Страница VR</h1>
+    <div class="courses-menu">
+        <ul>
+            {% for item in itemes %}
+                <li>
+                    <a href="{% url 'main:items_page' item.pk %}">
+                        {{ item }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

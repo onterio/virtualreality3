@@ -1,0 +1,17 @@
+{% block content %}
+    <h1>VR</h1>
+    <p>
+        {{ items.name }}
+    </p>
+    <p>
+         {{ items.desc }}
+    </p>
+    <p>
+        <img class="card-img-top" src="../../../{{ items.image }}" alt="Card image">
+    </p>
+
+    <a href="{% url 'basket:add' items.id %}"
+       class="btn btn-success">
+        Купить
+    </a>
+{% endblock %}
